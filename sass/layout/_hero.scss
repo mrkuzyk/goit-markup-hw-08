@@ -1,0 +1,38 @@
+.hero {
+  background-color: var(--page-background-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/fon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__title {
+  @include font(900, 44px, 1.36, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--header-color);
+  width: 696px;
+  margin-bottom: 40px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.hero__btn {
+  font-family: inherit;
+  font-style: normal;
+  @include font(700, 16px, 1.87, 0.06em);
+  display: block;
+  align-items: center;
+  text-align: center;
+  color: var(--header-color);
+  background-color: var(--accent-color);
+
+  @include w-h(200px, 50px);
+  border: 1px;
+  border-radius: 4px;
+  margin-right: auto;
+  margin-left: auto;
+}
