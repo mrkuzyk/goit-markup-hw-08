@@ -69,6 +69,10 @@
   overflow: hidden;
 }
 
+.project-img {
+  width: 370px;
+}
+
 .project-link-text {
   @include font(normal, 18px, 1.56);
   color: #ffffff;

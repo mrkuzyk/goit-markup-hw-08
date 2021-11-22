@@ -926,6 +926,10 @@ header {
   overflow: hidden;
 }
 
+.project-img {
+  width: 370px;
+}
+
 .project-link-text {
   font-weight: normal;
   font-size: 18px;
