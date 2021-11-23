@@ -1,23 +1,65 @@
 .hero {
+  margin-right: auto;
+  margin-left: auto;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+
   background-color: var(--page-background-color);
-  padding-top: 200px;
-  padding-bottom: 200px;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/fon.jpg);
+    url(../../images/fon/fon.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  max-width: 480px;
+  height: 400px;
+
+  @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../../images/fon/fon2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../../images/fon/fon-tablet.jpg);
+    max-width: 768px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../images/fon/fon-tablet2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: url(../../images/fon/fon-desktop.jpg);
+    max-width: 1600px;
+    height: 600px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../../images/fon/fon-desktop2x.jpg);
+    }
+  }
 }
 
 .hero__title {
-  @include font(900, 44px, 1.36, 0.06em);
+  @include font(900, 26px, 1.6, 0.06em);
   text-align: center;
   text-transform: uppercase;
   color: var(--header-color);
-  width: 696px;
+  width: 360px;
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 1200px) {
+    @include font(900, 44px, 1.36, 0.06em);
+    width: 696px;
+  }
 }
 
 .hero__btn {
