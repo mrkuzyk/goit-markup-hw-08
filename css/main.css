@@ -285,8 +285,8 @@ img {
 }
 
 header {
-  padding-top: 22px;
-  padding-bottom: 22px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -1236,18 +1236,52 @@ header {
 }
 
 .our-project {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .our-project {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .our-project-menu {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  margin-top: -15px;
+  margin-bottom: 40px;
+  margin-left: -8px;
 }
 
-.project-menu-item:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .our-project-menu {
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .our-project-menu {
+    margin-bottom: 50px;
+  }
+}
+
+.project-menu-item {
+  margin-top: 15px;
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-menu-item {
+    margin-top: 0;
+  }
+  .project-menu-item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 
 .project-btn {
@@ -1277,17 +1311,35 @@ header {
   display: flex;
   flex-wrap: wrap;
   margin-top: -30px;
-  margin-left: -30px;
+}
+
+@media screen and (min-width: 768px) {
+  .our-project-list {
+    margin-left: -30px;
+  }
 }
 
 .project-item {
-  flex-basis: calc(100% / 3 - 30px);
+  display: flex;
   margin-top: 30px;
-  margin-left: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-item {
+    margin-left: 30px;
+    flex-basis: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-item {
+    flex-basis: calc(100% / 3 - 30px);
+  }
 }
 
 .project-link {
-  display: block;
+  display: flex;
+  flex-direction: column;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1301,7 +1353,7 @@ header {
 }
 
 .project-img {
-  width: 370px;
+  width: 100%;
 }
 
 .project-link-text {
@@ -1335,6 +1387,7 @@ header {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  flex-grow: 1;
 }
 
 .project-caption {
