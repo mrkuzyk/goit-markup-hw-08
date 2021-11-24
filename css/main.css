@@ -694,8 +694,15 @@ header {
 }
 
 .than-we {
-  padding-top: 0;
-  padding-bottom: 94px;
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .than-we {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 94px;
+  }
 }
 
 .than-we-title {
