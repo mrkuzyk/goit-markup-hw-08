@@ -1,5 +1,9 @@
 .title {
-  @include font(bold, 36px, 1.16);
+  @include font(bold, 28px, 1.17);
   text-align: center;
   color: var(--title-color);
+
+  @media screen and (min-width: 1200px) {
+    @include font(bold, 36px, 1.16);
+  }
 }
