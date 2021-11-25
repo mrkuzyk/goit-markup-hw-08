@@ -80,12 +80,17 @@
 }
 
 .modal-policy {
-  @include font(normal, 14px, 1.71);
+  @include font(normal, 12px, 1.7);
   color: #757575;
 
   @include justify-content-center;
 
-  margin-bottom: 30px;
+  margin-bottom: 31px;
+
+  @media screen and (min-width: 1200px) {
+    @include font(normal, 14px, 1.71);
+    margin-bottom: 30px;
+  }
 
   &::before {
     content: '';

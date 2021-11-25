@@ -1,7 +1,7 @@
 .modal {
   position: absolute;
-  width: 528px;
-  min-height: 581px;
+  width: 450px;
+  min-height: 609px;
 
   padding: 40px;
   background: #ffffff;
@@ -12,6 +12,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media screen and (min-width: 1200px) {
+    width: 450px;
+    min-height: 609px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-btn {
