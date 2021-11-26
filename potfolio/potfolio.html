@@ -50,7 +50,7 @@
                     </a>
                 </li>
             </ul>
-            <button type="button" class="menu-btn">
+            <button type="button" class="menu-btn" data-menu-open>
                 <svg 
                     class="menu-icon" 
                     width="40" 
@@ -578,5 +578,60 @@
             </div>
         </div>
     </footer>
+    <div class="mobile-menu" data-menu>
+        <button type="button" class="mobile-menu__btn" data-menu-close>
+            <svg class="menu-close" width="40" height="40">
+                <use href="../images/sprite.svg#icon-close"></use>
+            </svg>
+        </button>
+        <div class="mobile-menu-block">
+            <div class="mobile-menu__navigation">
+                <ul class="mobile-menu__list list">
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link link" href="../index.html">Студия</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link curent link" href="./potfolio.html">Портфолио</a>
+                    </li>
+                    <li class="mobile-menu__item">
+                        <a class="mobile-menu__link link" href="">Контакти</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mobile-menu__second-block">
+                <div class="mobile-menu__contact">
+                    <ul class="menu-contact-list list">
+                        <li class="mobile-menu__item">
+                            <a class="menu-tel link" href="tel:+380961111111">
+                                +38 096 111 11 11
+                            </a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a class="menu-mail link" href="mailto:info@devstudio.com">
+                                info@devstudio.com
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mobile-social">
+                    <ul class="mobile-social__list list">
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link  link" href="">Instagram <span class="line">|</span></a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link  link" href="">Twitter <span class="line">|</span></a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href="">Facebook <span class="line">|</span></a>
+                        </li>
+                        <li class="mobile-social__item">
+                            <a class="mobile-social__link link" href="">LinkedIn</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/menu.js"></script>
 </body>
 </html>
