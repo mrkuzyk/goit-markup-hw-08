@@ -68,18 +68,22 @@
 .our-project-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
 
   @media screen and (min-width: 768px) {
+    margin-top: -30px;
     margin-left: -30px;
   }
 }
 
 .project-item {
   display: flex;
-  margin-top: 30px;
+
+  &:not(:first-child) {
+    margin-top: 30px;
+  }
 
   @media screen and (min-width: 768px) {
+    margin-top: 30px;
     margin-left: 30px;
     flex-basis: calc(100% / 2 - 30px);
   }

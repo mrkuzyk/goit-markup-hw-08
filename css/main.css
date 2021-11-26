@@ -545,20 +545,20 @@ header {
 
 @media screen and (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/fon/fon2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
   .hero {
-    background-image: url(../images/fon/fon-tablet.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon-tablet.jpg);
     max-width: 768px;
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/fon/fon-tablet2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon-tablet2x.jpg);
   }
 }
 
@@ -566,7 +566,7 @@ header {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
-    background-image: url(../images/fon/fon-desktop.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon-desktop.jpg);
     max-width: 1600px;
     height: 600px;
   }
@@ -574,7 +574,7 @@ header {
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: url(../images/fon/fon-desktop2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/fon/fon-desktop2x.jpg);
   }
 }
 
@@ -634,25 +634,23 @@ header {
   }
 }
 
-.benefits__list {
-  margin-top: -30px;
-}
-
 @media screen and (min-width: 768px) {
   .benefits__list {
     display: flex;
     flex-wrap: wrap;
+    margin-top: -30px;
     margin-left: -30px;
   }
 }
 
-.benefits__item {
+.benefits__item:not(:first-child) {
   margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .benefits__item {
     flex-basis: calc(100% / 2 - 30px);
+    margin-top: 30px;
     margin-left: 30px;
   }
 }
@@ -1334,22 +1332,26 @@ header {
 .our-project-list {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -30px;
 }
 
 @media screen and (min-width: 768px) {
   .our-project-list {
+    margin-top: -30px;
     margin-left: -30px;
   }
 }
 
 .project-item {
   display: flex;
+}
+
+.project-item:not(:first-child) {
   margin-top: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .project-item {
+    margin-top: 30px;
     margin-left: 30px;
     flex-basis: calc(100% / 2 - 30px);
   }
