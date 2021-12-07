@@ -174,7 +174,7 @@
   margin-bottom: 20px;
   margin-left: auto;
 
-  @include w-h(450px, 50px);
+  @include w-h(360px, 50px);
 
   display: flex;
   align-items: center;
@@ -183,6 +183,10 @@
   &::placeholder {
     @include font(normal, 16px, 1.25);
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media screen and (min-width: 480px) {
+    @include w-h(450px, 50px);
   }
 
   @media screen and (min-width: 1200px) {

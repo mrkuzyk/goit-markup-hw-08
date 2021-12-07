@@ -1,6 +1,6 @@
 .modal {
   position: absolute;
-  width: 450px;
+  width: 345px;
   min-height: 609px;
 
   padding: 40px;
@@ -13,7 +13,11 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 768px) {
     width: 450px;
     min-height: 609px;
   }

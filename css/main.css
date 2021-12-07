@@ -59,10 +59,16 @@ img {
 }
 
 .conteiner {
-  width: 480px;
+  width: 360px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 480px) {
+  .conteiner {
+    width: 480px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -122,7 +128,7 @@ img {
 
 .modal {
   position: absolute;
-  width: 450px;
+  width: 345px;
   min-height: 609px;
   padding: 40px;
   background: #ffffff;
@@ -133,7 +139,13 @@ img {
   transform: translate(-50%, -50%);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
   .modal {
     width: 450px;
     min-height: 609px;
@@ -586,10 +598,16 @@ header {
   text-align: center;
   text-transform: uppercase;
   color: var(--header-color);
-  width: 360px;
+  width: 300px;
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -662,7 +680,7 @@ header {
 }
 
 .benefits-box {
-  width: 450px;
+  width: 330px;
   height: 120px;
   margin-bottom: 30px;
   background: #f5f4fa;
@@ -670,6 +688,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (min-width: 480px) {
+  .benefits-box {
+    width: 480px;
+    height: 120px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -709,7 +734,13 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  width: 450px;
+  width: 355px;
+}
+
+@media screen and (min-width: 480px) {
+  .benefits__text {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -753,7 +784,13 @@ header {
   margin-top: 30px;
   margin-left: 30px;
   position: relative;
-  width: 370px;
+  width: 270px;
+}
+
+@media screen and (min-width: 1200px) {
+  .than-photo {
+    width: 370px;
+  }
 }
 
 .than-img {
@@ -813,11 +850,17 @@ header {
 }
 
 .about-team {
-  width: 450px;
+  width: 300px;
   margin-top: 30px;
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .about-team {
+    width: 450px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1203,7 +1246,7 @@ header {
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
-  width: 450px;
+  width: 360px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -1216,6 +1259,13 @@ header {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 480px) {
+  .footer-input {
+    width: 450px;
+    height: 50px;
+  }
 }
 
 @media screen and (min-width: 1200px) {

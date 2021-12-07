@@ -56,10 +56,14 @@
   text-align: center;
   text-transform: uppercase;
   color: var(--header-color);
-  width: 360px;
+  width: 300px;
   margin-bottom: 40px;
   margin-right: auto;
   margin-left: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 360px;
+  }
 
   @media screen and (min-width: 1200px) {
     @include font(900, 44px, 1.36, 0.06em);
