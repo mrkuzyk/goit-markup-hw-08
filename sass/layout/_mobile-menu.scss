@@ -41,6 +41,14 @@
   }
 }
 
+.menu-close {
+  @include w-h(25px, 25px);
+
+  @media screen and (min-width: 480px) {
+    @include w-h(40px, 40px);
+  }
+}
+
 .mobile-menu-block {
   display: flex;
   flex-direction: column;

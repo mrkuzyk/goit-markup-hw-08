@@ -130,7 +130,10 @@ img {
   position: absolute;
   width: 345px;
   min-height: 609px;
-  padding: 40px;
+  padding-top: 40px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -141,6 +144,7 @@ img {
 
 @media screen and (min-width: 480px) {
   .modal {
+    padding: 40px;
     width: 450px;
   }
 }
@@ -177,6 +181,12 @@ img {
 
 .modal-btn:hover, .modal-btn:focus {
   fill: var(--accent-color);
+}
+
+.modal-close {
+  width: 18px;
+  height: 18px;
+  fill: black;
 }
 
 .modal-form-head {
@@ -271,6 +281,12 @@ img {
   margin-bottom: 31px;
 }
 
+@media screen and (max-width: 479px) {
+  .modal-policy {
+    display: inline-block;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .modal-policy {
     font-weight: normal;
@@ -293,7 +309,39 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 479px) {
+  .modal-policy::before {
+    display: none;
+  }
+}
+
 .modal-form-checkbox:checked + .modal-policy::before {
+  border-radius: 2px;
+  border-color: var(--accent-color);
+  background-image: url(../images/icon-check.svg);
+  background-size: cover;
+  background-origin: border-box;
+}
+
+.modal-policy::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 1px solid #212121;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-image 250ms cubic-bezier(0.4, 0, 0.2, 1), background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 480px) {
+  .modal-policy::after {
+    display: none;
+  }
+}
+
+.modal-form-checkbox:checked + .modal-policy::after {
   border-radius: 2px;
   border-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
@@ -680,7 +728,7 @@ header {
 }
 
 .benefits-box {
-  width: 330px;
+  width: 320px;
   height: 120px;
   margin-bottom: 30px;
   background: #f5f4fa;
@@ -688,6 +736,13 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 479px) {
+  .benefits-box {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -734,7 +789,13 @@ header {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
-  width: 355px;
+  width: 330px;
+}
+
+@media screen and (max-width: 479px) {
+  .benefits__text {
+    text-align: center;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -849,12 +910,25 @@ header {
   margin-left: -30px;
 }
 
+@media screen and (max-width: 479px) {
+  .team-list {
+    margin-left: 0;
+  }
+}
+
 .about-team {
   width: 300px;
   margin-top: 30px;
   margin-left: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (max-width: 479px) {
+  .about-team {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 @media screen and (min-width: 480px) {
@@ -983,6 +1057,12 @@ header {
   margin-left: -30px;
 }
 
+@media screen and (max-width: 479px) {
+  .client__list {
+    margin-left: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .client__list {
     margin-top: 0;
@@ -996,7 +1076,19 @@ header {
   height: 92px;
   margin-top: 30px;
   margin-left: 30px;
-  flex-basis: calc(100% / 2 - 30px);
+}
+
+@media screen and (max-width: 479px) {
+  .client__item {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .client__item {
+    flex-basis: calc(100% / 2 - 30px);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1246,7 +1338,7 @@ header {
   margin-right: auto;
   margin-bottom: 20px;
   margin-left: auto;
-  width: 360px;
+  width: 330px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -1517,6 +1609,18 @@ header {
 
 .mobile-menu__btn:hover, .mobile-menu__btn:focus {
   fill: var(--accent-color);
+}
+
+.menu-close {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (min-width: 480px) {
+  .menu-close {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .mobile-menu-block {

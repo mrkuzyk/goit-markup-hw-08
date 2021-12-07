@@ -1,6 +1,11 @@
 .modal-form {
 }
 
+.modal-close {
+  @include w-h(18px, 18px);
+  fill: black;
+}
+
 .modal-form-head {
   @include font(bold, 20px, 1.15);
   text-align: center;
@@ -87,6 +92,10 @@
 
   margin-bottom: 31px;
 
+  @media screen and (max-width: 479px) {
+    display: inline-block;
+  }
+
   @media screen and (min-width: 1200px) {
     @include font(normal, 14px, 1.71);
     margin-bottom: 30px;
@@ -105,9 +114,40 @@
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
       background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (max-width: 479px) {
+      display: none;
+    }
   }
 
   .modal-form-checkbox:checked + &::before {
+    border-radius: 2px;
+    border-color: var(--accent-color);
+    background-image: url(../images/icon-check.svg);
+    background-size: cover;
+    background-origin: border-box;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    @include w-h(16px, 15px);
+    border: 1px solid #212121;
+    border-radius: 4px;
+
+    cursor: pointer;
+    margin-left: 10px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-image 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      background-size 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 480px) {
+      display: none;
+    }
+  }
+
+  .modal-form-checkbox:checked + &::after {
     border-radius: 2px;
     border-color: var(--accent-color);
     background-image: url(../images/icon-check.svg);

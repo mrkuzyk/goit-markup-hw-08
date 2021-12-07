@@ -37,11 +37,16 @@
   // margin-right: auto;
   // margin-left: auto;
 
-  @include w-h(330px, 120px);
+  @include w-h(320px, 120px);
   margin-bottom: 30px;
   background: #f5f4fa;
   border-radius: 4px;
   @include justify-content-center;
+
+  @media screen and (max-width: 479px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
   @media screen and (min-width: 480px) {
     @include w-h(480px, 120px);
@@ -71,7 +76,11 @@
 .benefits__text {
   @include font(normal, 14px, 1.71);
   color: var(--secondary-text-color);
-  width: 355px;
+  width: 330px;
+
+  @media screen and (max-width: 479px) {
+    text-align: center;
+  }
 
   @media screen and (min-width: 480px) {
     width: 450px;
